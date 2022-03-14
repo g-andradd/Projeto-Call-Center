@@ -23,7 +23,7 @@ public class TestaFila {
         System.out.println("----------------------------------------\n");
 
         //Enquanto o usuario não digitar 4, o loop continua
-        while (! acao.equals("4")) {
+        while (!acao.equals("4")) {
             System.out.println("Digite o número da ação que deseja fazer: ");
             System.out.println("1 - Inserir Contato");
             System.out.println("2 - Próximo Contato");
