@@ -9,6 +9,7 @@ public class TestaFila {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
+        //Criando o objeto Fila
         Fila fila = new Fila();
 
         //Variavel que recebe qual acao o usuario irá fazer
@@ -38,8 +39,10 @@ public class TestaFila {
                 case "1":
                     if (fila.size() <= 10) {
                         System.out.println("Digite o nome do Contato: ");
+                        //recebe o nome
                         nome = input.next();
                         System.out.println("Digite o telefone do Contato: ");
+                        //recebe o telefone
                         telefone = input.next();
 
                         //grava as variaveis nome e telefone no objeto Contato
@@ -52,6 +55,7 @@ public class TestaFila {
                     break;
                 //mosta o fila.remove e caso nao tenha contato mostra mensagem de erro
                 case "2":
+                    //tenta mostrar o proximo contato da fila, mas caso nao exista, cai no catch
                     try {
                         System.out.println(fila.proximoContato());
                     } catch (Exception e) {
@@ -60,6 +64,7 @@ public class TestaFila {
                     break;
                 //Lista os contatos contidos na Fila, e caso nao tenha contato mostra mensagem de erro
                 case "3":
+                    //só lista contato de a fila tiver com pelo menos 1 elemento
                     if (fila.size() != 0) {
                         System.out.println(fila.listarContatos());
                     } else {
